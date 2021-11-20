@@ -1,0 +1,42 @@
+@media (min-width: 0px) and (orientation: landscape) {
+    .toolBar{
+        height: 4rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .toolBar{
+        height: 5rem;
+    }
+}
+
+.generalInfo {
+    height: 6rem;
+}
+
+.orderBook{
+    height: 25rem;
+}
+
+.chart{
+    height: 31rem;
+}
+
+.orderForm{
+    height: 76rem;
+}
+
+.trades{
+    height: 25rem;
+}
+
+.userInfo{
+    height: 20rem;
+}
+
+.footer{
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    height: 1.5rem;
+}
