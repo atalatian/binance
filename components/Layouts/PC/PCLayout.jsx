@@ -4,14 +4,40 @@ import { Container, Grid, Paper } from '@mui/material'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
+import Binance from '../../../public/binance.png';
+import Image from 'next/image'
+import IconButton from '@mui/material/IconButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import { Menu } from 'semantic-ui-react'
 
 
 const PCLayout = (props) => {
   return(
     <Fragment>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar sx={{ backgroundColor: `#184890` }} position="static">
           <Toolbar className={`${classes.toolBar}`}>
+            <div className={`d-flex align-items-center ${classes.logo}`}>
+              <Image src={Binance} alt="Binance"/>
+            </div>
+            <IconButton className={`ms-3`} color={`inherit`}>
+              <FontAwesomeIcon icon={faBars} size={`2x`}/>
+              <FontAwesomeIcon className={`ms-3`} icon={faCaretDown} size={`1x`}/>
+            </IconButton>
+            <IconButton className={`ms-3`} color={`inherit`}>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Buy Crypto
+              </Typography>
+              <FontAwesomeIcon className={`ms-3`} icon={faCaretDown} size={`1x`}/>
+            </IconButton>
+            <Button color={`inherit`}>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Markets
+              </Typography>
+            </Button>
           </Toolbar>
         </AppBar>
         <Paper className={`rounded-0 border border-danger ${classes.articles}`} elevation={3}>
@@ -68,7 +94,6 @@ const PCLayout = (props) => {
           </Grid>
         </Grid>
       </Container>
-      <div className={`position-static ${classes.footer}`}>&nbsp;</div>
       <footer className={`${classes.footer}`}>
         <Paper className={`rounded-0 border border-danger`} elevation={3}>
           Footer

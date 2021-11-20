@@ -3,7 +3,7 @@ import TabletLayout from '../components/Layouts/Tablet/TabletLayout'
 import PhoneLayout from '../components/Layouts/Phone/PhoneLayout'
 
 const HomePage = () => {
-  return <PhoneLayout/>;
+  return <PCLayout/>;
 }
 
 export default HomePage;
