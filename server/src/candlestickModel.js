@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const candlestickSchema = mongoose.Schema({
+const candlestickSchema = new mongoose.Schema({
   candle_id: { type: String, index: { unique: true, dropDups: true } },
   pair: { type: String },
   start_time: { type: String },

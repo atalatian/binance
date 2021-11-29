@@ -1,9 +1,11 @@
-import PCLayout from '../components/Layouts/PC/PCLayout'
-import TabletLayout from '../components/Layouts/Tablet/TabletLayout'
-import PhoneLayout from '../components/Layouts/Phone/PhoneLayout'
+import Render from '../components/Render/Render'
+import { Fragment } from 'react'
+import CssBaseline from '@mui/material/CssBaseline';
 
 const HomePage = () => {
-  return <PCLayout/>;
+  return <Fragment><CssBaseline /><Render/></Fragment>;
 }
 
 export default HomePage;
+
+

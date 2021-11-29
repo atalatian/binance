@@ -1,40 +1,29 @@
-import { Fragment } from 'react'
-import Box from '@mui/material/Box'
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
+import {Fragment} from 'react'
 import classes from '../Phone/PhoneLayout.module.css'
-import { Grid, Paper } from '@mui/material'
+import { Grid } from '@mui/material'
+import NavBarComponent from "../../NavBar/NavBarComponent";
+import GeneralInfo from "../../GeneralInfo/GeneralInfo";
+import MuiTabs from "./children/Tabs/Tabs";
+import UserInfo from "../../UserInfo/UserInfo";
+import Footer from "../../Footer/Footer";
 
-const PhoneLayout = (props) => {
+const PhoneLayout = () => {
   return(
     <Fragment>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar className={`${classes.toolBar}`}>
-          </Toolbar>
-        </AppBar>
-      </Box>
+      <NavBarComponent/>
       <Grid container>
         <Grid item xs={12}>
-          <Paper className={`rounded-0 border border-danger ${classes.generalInfo}`} elevation={3}>
-            General Info
-          </Paper>
+          <GeneralInfo/>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={`rounded-0 border border-danger ${classes.panel}`} elevation={3}>
-            Panel
-          </Paper>
+          <MuiTabs/>
         </Grid>
         <Grid item xs={12}>
-          <Paper className={`rounded-0 border border-danger ${classes.userInfo}`} elevation={3}>
-            User Info
-          </Paper>
+          <UserInfo/>
         </Grid>
       </Grid>
       <footer className={`${classes.footer}`}>
-        <Paper sx={{ height: `100%` }} className={`rounded-0 border border-danger`} elevation={3}>
-          Footer
-        </Paper>
+        <Footer/>
       </footer>
     </Fragment>
   );

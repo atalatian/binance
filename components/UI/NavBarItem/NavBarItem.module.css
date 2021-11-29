@@ -1,0 +1,8 @@
+.button:hover{
+    background-color: #FFB81C;
+    color: black;
+}
+
+.iconButton:hover{
+    color: #FFB81C;
+}

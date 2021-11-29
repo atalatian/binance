@@ -26,5 +26,5 @@
     width: 100%;
     position: sticky;
     bottom: 0;
-    height: 4rem;
+    z-index: 100;
 }
