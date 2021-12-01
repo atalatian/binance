@@ -8,7 +8,7 @@ import MuiSelect from './children/MuiSelect'
 const sections = [
   {id: `b1`, texts: [
       {id: `ty1`, text: `24h Change`, color: `#ffffff`},
-      {id: `ty2`, text: `9.44 + 0.01%`, color: `rgb(246, 70, 93)`}
+      {id: `ty2`, text: `9.44 + 0.01%`, color: `#d23423`}
     ]},
   {id: `b2`, texts: [
       {id: `ty1`, text: `24h Change`, color: `#ffffff`},
@@ -32,19 +32,19 @@ const sections = [
 const GeneralInfo = () => {
   return(
     <Fragment>
-      <Paper sx={{ backgroundColor: `#184890`, borderRadius: 0, pt: 1, pb: 1 }}>
+      <Paper sx={{ backgroundColor: `#113264`, borderRadius: 0, pt: 1, pb: 1 }}>
         <Stack direction={`row`}  flexWrap={`wrap`} spacing={3}>
           <Stack direction={`row`} spacing={3}>
             <Box sx={{display: `flex`, flexDirection: `column`, justifyContent: `center`, ml: 1}}>
               <MuiSelect/>
-              <Link href={`#`} underline={`none`} className={`${classes.link}`}>
-                <Typography variant={`caption`}>
+              <Link href={`#`} underline={`none`} >
+                <Typography variant={`caption`} sx={{ color: `#ffffff`, '&:hover': { color: `#d28c23` } }}>
                   Bitcoin
                 </Typography>
               </Link>
             </Box>
             <Box sx={{display: `flex`, flexDirection: `column`, justifyContent: `center`}}>
-              <Typography variant="subtitle1" component="div" sx={{ color: `rgb(14, 203, 129)` }}>
+              <Typography variant="subtitle1" component="div" sx={{ color: `#c0d223` }}>
                 59.388.32
               </Typography>
               <Typography variant="caption" component="div" sx={{ color: `#ffffff` }}>
@@ -70,7 +70,8 @@ const GeneralInfo = () => {
           <Typography variant={`caption`} component={`div`}
                       sx={{ display: `flex`, alignItems: `center`,
                         margin: `auto !important`, mr: `10px !important` }}>
-            <Link className={`${classes.link}`} href={`#`} sx={{ display: `flex`, alignItems: `center`}}
+            <Link className={`${classes.link}`} href={`#`} sx={{ display: `flex`, alignItems: `center`,
+              color: `#ffffff`, '&:hover': { color: `#d28c23` }}}
                   underline={`none`}><PlayCircleOutlineIcon sx={{ m: 1 }}/> Spot Tutorial</Link>
           </Typography>
         </Stack>

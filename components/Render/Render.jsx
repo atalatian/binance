@@ -16,7 +16,7 @@ const Render = () => {
     if (string === 'true false false'){
       return <PhoneLayout />
     }else if (string === 'true true false'){
-      return <TabletLayout />
+      return <TabletLayout string={string} />
     }else if (string === 'true true true'){
       return <PCLayout />
     }
@@ -25,7 +25,7 @@ const Render = () => {
 
   return(
     <Fragment>
-      <div style={{ backgroundColor: `#184890` }}>
+      <div style={{ backgroundColor: `#113264` }}>
         {handleRender()}
       </div>
     </Fragment>

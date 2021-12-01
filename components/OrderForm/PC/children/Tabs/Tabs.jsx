@@ -18,20 +18,20 @@ const  MuiTabs = () => {
         value={value}
         onChange={handleChange}
         sx={{
-          backgroundColor: `#2b4c7d`,
+          backgroundColor: `#0d274e`,
           '& .MuiButtonBase-root': {
             color: `#ffffff`,
             display: `flex`,
             flexDirection: `row-reverse`,
           },
           '& .MuiTabs-indicator': {
-            backgroundColor: '#FFB81C'
+            backgroundColor: '#d28c23'
           },
           '& .MuiButtonBase-root.Mui-selected': {
-            color: '#FFB81C',
+            color: '#d28c23',
           },
           '& .MuiButtonBase-root:hover': {
-            color: '#FFB81C',
+            color: '#d28c23',
           },
         }}
         variant="scrollable"

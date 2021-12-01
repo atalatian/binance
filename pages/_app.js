@@ -1,11 +1,9 @@
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import pairReducer from '../redux/reducers/pairReducer'
+import client from '../graphql/client/apollo-client'
+import { ApolloProvider } from '@apollo/client'
 
 
 function MyApp ({ Component, pageProps }) {
-  const store = createStore(pairReducer);
-  return <Provider store={store}><Component {...pageProps} /></Provider>
+  return <ApolloProvider client={client}><Component {...pageProps} /></ApolloProvider>
 }
 
 export default MyApp

@@ -45,7 +45,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const SearchField = () => {
   return(
-    <Box sx={{ backgroundColor: `#4c63a2`, p: 1 }}>
+    <Box sx={{ backgroundColor: `#113264`, p: 1 }}>
       <Search>
         <SearchIconWrapper>
           <SearchIcon />

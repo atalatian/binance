@@ -12,22 +12,22 @@ function createData(id, price, amount, time, color) {
 }
 
 const rows = [
-  createData('d1', '57,578.46', `0.4956`, `12:55:07`, `rgb(14, 203, 129)`),
-  createData('d2', '57,578.46', `0.4956`, `12:55:07`, `rgb(246, 70, 93)`),
-  createData('d3', '57,578.46', `0.4956`, `12:55:07`, `rgb(246, 70, 93)`),
-  createData('d4', '57,578.46', `0.4956`, `12:55:07`, `rgb(14, 203, 129)`),
-  createData('d5', '57,578.46', `0.4956`, `12:55:07`, `rgb(14, 203, 129)`),
-  createData('d6', '57,578.46', `0.4956`, `12:55:07`, `rgb(246, 70, 93)`),
-  createData('d7', '57,578.46', `0.4956`, `12:55:07`, `rgb(14, 203, 129)`),
-  createData('d8', '57,578.46', `0.4956`, `12:55:07`, `rgb(14, 203, 129)`),
-  createData('d9', '57,578.46', `0.4956`, `12:55:07`, `rgb(246, 70, 93)`),
-  createData('d10', '57,578.46', `0.4956`, `12:55:07`, `rgb(246, 70, 93)`),
-  createData('d11', '57,578.46', `0.4956`, `12:55:07`, `rgb(246, 70, 93)`),
+  createData('d1', '57,578.46', `0.4956`, `12:55:07`, `#c0d223`),
+  createData('d2', '57,578.46', `0.4956`, `12:55:07`, `#d23423`),
+  createData('d3', '57,578.46', `0.4956`, `12:55:07`, `#d23423`),
+  createData('d4', '57,578.46', `0.4956`, `12:55:07`, `#c0d223`),
+  createData('d5', '57,578.46', `0.4956`, `12:55:07`, `#c0d223`),
+  createData('d6', '57,578.46', `0.4956`, `12:55:07`, `#d23423`),
+  createData('d7', '57,578.46', `0.4956`, `12:55:07`, `#c0d223`),
+  createData('d8', '57,578.46', `0.4956`, `12:55:07`, `#c0d223`),
+  createData('d9', '57,578.46', `0.4956`, `12:55:07`, `#d23423`),
+  createData('d10', '57,578.46', `0.4956`, `12:55:07`, `#d23423`),
+  createData('d11', '57,578.46', `0.4956`, `12:55:07`, `#d23423`),
 ];
 
 const DenseTable = (props) => {
   return (
-    <TableContainer sx={{ backgroundColor: `#184890`, borderRadius: 0,
+    <TableContainer sx={{ backgroundColor: `#113264`, borderRadius: 0,
       maxHeight: `${(props.maxHeight ? `${props.maxHeight}rem` : 'none')}`, }}
                     component={Paper}>
       <Table size="small" aria-label="a dense table">

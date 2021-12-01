@@ -3,12 +3,12 @@ import Panel from './children/Panel/Panel'
 import { Box, } from '@mui/material'
 import MuiTabs from "../PC/children/Tabs/Tabs";
 
-const Tablet = () => {
+const Tablet = (props) => {
   return(
     <Fragment>
-      <Box sx={{ backgroundColor: `#184890`, }}>
+      <Box sx={{ backgroundColor: `#113264`, }}>
         <MuiTabs/>
-        <Panel/>
+        <Panel string={props.string}/>
       </Box>
     </Fragment>
   );

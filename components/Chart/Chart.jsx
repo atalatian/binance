@@ -14,7 +14,7 @@ const Chart = (props) => {
   useEffect(()=>{
     const handleResize = () => {
       setRenderChart(false)
-      setChartWidth(chartParent.current.offsetWidth);
+      setChartWidth(chartParent.current.offsetWidth - 5);
     }
     window.addEventListener('resize', handleResize)
     return ()=> {window.removeEventListener('resize', handleResize); setRenderChart(true)}
@@ -24,16 +24,29 @@ const Chart = (props) => {
   const handleRef = (e) => {
     if (e){
       chartParent.current = e
-      setChartWidth(e.offsetWidth)
+      setChartWidth(e.offsetWidth - 5)
     }
+  }
+
+  const formatCandles = (candles) => {
+    return candles.getCandles.map(candle=> {
+      return {
+        date: candle.start_time,
+        open: candle.open,
+        low: candle.low,
+        high: candle.high,
+        close: candle.close,
+        volume: candle.volume
+      }
+    })
   }
 
 
   return(
-    <Paper sx={{ backgroundColor: `#4c63a2`, borderRadius: 0 }}
+    <Paper sx={{ backgroundColor: `#113264`, borderRadius: 0 }}
            elevation={0} ref={e => handleRef(e)}>
       {
-        renderChart && <CandleStick data={props.data} width={chartWidth}/>
+        renderChart && <CandleStick candles={formatCandles(props.candles)} pair={props.pair} width={chartWidth}/>
       }
     </Paper>
   );

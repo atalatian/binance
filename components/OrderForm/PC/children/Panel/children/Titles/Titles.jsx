@@ -4,7 +4,7 @@ import { Stack, Typography } from '@mui/material'
 const Titles = () => {
   return(
     <Fragment>
-      <Stack sx={{ backgroundColor: `#2b4c7d`, p: 1 }} direction={`row`}>
+      <Stack sx={{ backgroundColor: `#0d274e`, p: 1 }} direction={`row`}>
         <Typography sx={{ color: `#ffffff` }} variant={`caption`}>
           Avbl
         </Typography>

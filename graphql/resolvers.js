@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 export const resolvers = {
   Query: {
+    hello: ()=> 'Hello',
     getCandles: async (parent, { pair }) => {
       const Candle = mongoose.model('Candlestick')
       const candles = await Candle.find({ pair: pair }).select('-_id').exec();

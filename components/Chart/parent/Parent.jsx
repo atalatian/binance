@@ -1,56 +1,39 @@
 import Chart from '../Chart'
-import { Fragment, useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { Fragment } from 'react';
+import { useQuery, gql, useReactiveVar } from '@apollo/client'
+import { pairVar } from '../../../graphql/client/cache'
+
+const QUERY = gql`
+    query Query($pair: String!) {
+      getCandles(pair: $pair){
+        start_time
+        pair
+        open
+        high
+        low
+        close
+        volume
+      }
+    }
+`;
+
 
 const Parent = () => {
 
-  const [data, setData] = useState([])
-  const reduxPair = useSelector(state => state);
+  const pair = useReactiveVar(pairVar)
 
-  useEffect(()=> {
-    fetch('/api/graphql', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query: `
-          query Query($pair: String!) {
-            getCandles(pair: $pair){
-              start_time
-              open
-              high
-              low
-              close
-              volume
-            }
-          }
-      `,
-        variables: {
-          pair: reduxPair
-        },
-      }),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        const newData = result.data.getCandles.map(candle=> {
-          return {
-            date: candle.start_time,
-            open: candle.open,
-            low: candle.low,
-            high: candle.high,
-            close: candle.close,
-            volume: candle.volume
-          }
-        })
-        setData(newData);
-      }
-      );
-  }, [reduxPair])
+  const { loading, error, data } = useQuery(QUERY, {
+    variables: {
+      pair: pair
+    },
+  })
+
+  if (loading) return null;
+  if (error) return `Error! ${error}`;
 
   return(
     <Fragment>
-      <Chart data={data}/>
+      <Chart candles={data} pair={pair}/>
     </Fragment>
   );
 }

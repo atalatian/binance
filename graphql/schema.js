@@ -16,6 +16,7 @@ export const typeDefs = gql`
   }
   
   type Query {
+    hello: String!
     getCandles(pair: String!): [Candle!]
   }
 `;

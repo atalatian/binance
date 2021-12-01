@@ -6,7 +6,7 @@ import { Box } from '@mui/material'
 const PC = () => {
   return(
     <Fragment>
-      <Box sx={{ backgroundColor: `#184890`, }}>
+      <Box sx={{ backgroundColor: `#113264`, }}>
         <MuiTabs/>
         <Panel/>
       </Box>

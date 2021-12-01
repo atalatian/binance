@@ -14,7 +14,7 @@ const NavBarItem = (props) => {
   let hoverColor = `#ffffff`
 
   if (variant === `contained`){
-    bgColor = `#FFB81C`;
+    bgColor = `#d28c23`;
     hoverColor = `#000000`
   }
 
@@ -32,12 +32,12 @@ const NavBarItem = (props) => {
                   sx={{ textTransform: `none`,
                     backgroundColor: bgColor,
                     ml: 1,
-                    '&:hover': {backgroundColor: `#FFB81C`, color: hoverColor}
+                    '&:hover': {backgroundColor: `#d28c23`, color: hoverColor}
                   }} color={`inherit`}>
             <div style={{ display: `flex` }}>
               {props.children}
               {
-                !newChip || <Chip sx={{ backgroundColor: `#FFB81C`, cursor: `pointer`, ml: 1 }}
+                !newChip || <Chip sx={{ backgroundColor: `#d28c23`, cursor: `pointer`, ml: 1, color: `#ffffff` }}
                                   label={`new`} size={`small`}/>
               }
               {

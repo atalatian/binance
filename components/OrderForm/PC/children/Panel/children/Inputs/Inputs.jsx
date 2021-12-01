@@ -22,14 +22,14 @@ const Inputs = () => {
 
   return(
     <Fragment>
-      <Stack sx={{ backgroundColor: `#2b4c7d`,}}>
+      <Stack sx={{ backgroundColor: `#0d274e`,}}>
         {
           inputsInfo.map(inputInfo =>
             <FormControl key={inputInfo.id} sx={{ p: 1,}} fullWidth variant="outlined">
               <OutlinedInput
                 id={`outlined-adornment-${inputInfo.name}`}
                 placeholder={`${inputInfo.placeHolder}`}
-                sx={{ '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: `#FFB81C !important` },
+                sx={{ '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: `#d28c23 !important` },
                   color: `#ffffff`,
                   '& .MuiOutlinedInput-notchedOutline': { borderColor: `#ffffff !important` },
                 }}

@@ -4,21 +4,19 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { useSelector, useDispatch } from 'react-redux'
+import { useReactiveVar } from '@apollo/client'
+import { pairVar } from '../../../graphql/client/cache'
 
 export default function MuiSelect() {
 
-  const reduxPair = useSelector(state => state);
-  const [pair, setPair] = React.useState(reduxPair);
-  const dispatch = useDispatch();
+  const pair = useReactiveVar(pairVar)
 
   const handleChange = (event) => {
     if (event.target.value === 'BTC/USDT'){
-      dispatch({ type: 'GO_BTC/USDT' })
+      pairVar('BTC/USDT')
     }else if (event.target.value === 'BNB/BTC'){
-      dispatch({ type: 'GO_BNB/BTC' })
+      pairVar('BNB/BTC')
     }
-    setPair(event.target.value);
   };
 
   return (
@@ -32,7 +30,7 @@ export default function MuiSelect() {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={pair}
-          sx={{ '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: `#FFB81C !important` },
+          sx={{ '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: `#d28c23 !important` },
             color: `#ffffff`,
             '& .MuiOutlinedInput-notchedOutline': { borderColor: `rgb(255 255 255 / 23%) !important` },
             '& .MuiSvgIcon-root': {

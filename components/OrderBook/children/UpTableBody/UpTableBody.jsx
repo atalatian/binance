@@ -32,7 +32,7 @@ const rows = [
 const UpTableBody = (props) => {
   return(
     <Fragment>
-      <Stack sx={{ p: 1, backgroundColor: `#184890` }} direction={`row`} spacing={2} alignItems={`center`}>
+      <Stack sx={{ p: 1, backgroundColor: `#113264` }} direction={`row`} spacing={2} alignItems={`center`}>
         <Typography variant={`body1`} sx={{ color: `#ffffff` }}>
           58,254.74
         </Typography>
@@ -45,7 +45,7 @@ const UpTableBody = (props) => {
                 margin: `auto !important`,
                 marginRight: `0 !important`,
                 '&:hover': {
-                  color: `#FFB81C`
+                  color: `#d28c23`
                 }
               }}>
           <Typography variant={`caption`}>
@@ -54,7 +54,7 @@ const UpTableBody = (props) => {
         </Link>
       </Stack>
       <TableContainer
-        sx={{ backgroundColor: `#184890`, borderRadius: 0,
+        sx={{ backgroundColor: `#113264`, borderRadius: 0,
           maxHeight: `${(props.maxHeight ? `${props.maxHeight}rem` : 'none')}`, }} component={Paper}>
         <Table size="small" aria-label="a dense table">
           <TableBody>
@@ -63,7 +63,7 @@ const UpTableBody = (props) => {
                 key={row.id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell sx={{ color: `rgb(14, 203, 129)` }} align="left">{row.price}</TableCell>
+                <TableCell sx={{ color: `#c0d223` }} align="left">{row.price}</TableCell>
                 <TableCell sx={{ color: `#ffffff` }} align="left">{row.amount}</TableCell>
                 <TableCell sx={{ color: `#ffffff` }} align="left">{row.time}</TableCell>
               </TableRow>

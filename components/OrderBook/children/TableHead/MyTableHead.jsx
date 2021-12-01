@@ -8,7 +8,7 @@ import * as React from 'react'
 
 const MyTableHead = () => {
   return(
-    <TableContainer sx={{ backgroundColor: `#184890`, borderRadius: 0 }} component={Paper}>
+    <TableContainer sx={{ backgroundColor: `#113264`, borderRadius: 0 }} component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>

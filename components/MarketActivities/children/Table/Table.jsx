@@ -18,11 +18,11 @@ const rows = [
       {id: `clock`, text: `14:39:07`, variant: `caption`},
     ],
     pe_txs: [
-      {id: `percentage`, text: `+3.38%`, color: `rgb(14, 203, 129)`},
+      {id: `percentage`, text: `+3.38%`, color: `#c0d223`},
       {id: `text`, text: `New 24h High`, color: `#ffffff`},
     ],
     icon: <ArrowUpward/>,
-    color: `rgb(14, 203, 129)`,
+    color: `#acbc1f`,
   },
   {
     id: `d2`,
@@ -31,17 +31,17 @@ const rows = [
       {id: `clock`, text: `14:39:07`, variant: `caption`},
     ],
     pe_txs: [
-      {id: `percentage`, text: `-3.38%`, color: `rgb(246, 70, 93)`},
+      {id: `percentage`, text: `-3.38%`, color: `#d23423`},
       {id: `text`, text: `In 5 min`, color: `#ffffff`},
     ],
     icon: <ArrowDownward/>,
-    color: `rgb(246, 70, 93)`,
+    color: `#bc2f1f`,
   },
 ];
 
 const BasicTable = () => {
   return (
-    <TableContainer sx={{ backgroundColor: `#184890`, borderRadius: 0 }} component={Paper}>
+    <TableContainer sx={{ backgroundColor: `#113264`, borderRadius: 0, }} component={Paper}>
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -75,7 +75,7 @@ const BasicTable = () => {
                 }
               </TableCell>
               <TableCell align="left">
-                <Button variant={`contained`} sx={{ backgroundColor: row.color }}>
+                <Button variant={`contained`} sx={{ backgroundColor: row.color, "&:hover": {backgroundColor: row.color} }}>
                   {row.icon}
                 </Button>
               </TableCell>

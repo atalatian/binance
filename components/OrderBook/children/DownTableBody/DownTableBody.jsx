@@ -30,7 +30,7 @@ const rows = [
 const DownTableBody = (props) => {
   return(
     <TableContainer
-      sx={{ backgroundColor: `#184890`, borderRadius: 0,
+      sx={{ backgroundColor: `#113264`, borderRadius: 0,
         maxHeight: `${(props.maxHeight ? `${props.maxHeight}rem` : 'none')}`, }} component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableBody>
@@ -39,7 +39,7 @@ const DownTableBody = (props) => {
               key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell sx={{ color: `rgb(246, 70, 93)` }} align="left">{row.price}</TableCell>
+              <TableCell sx={{ color: `#d23423` }} align="left">{row.price}</TableCell>
               <TableCell sx={{ color: `#ffffff` }} align="left">{row.amount}</TableCell>
               <TableCell sx={{ color: `#ffffff` }} align="left">{row.time}</TableCell>
             </TableRow>

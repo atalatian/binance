@@ -7,8 +7,8 @@ const NavBar = (props) => {
   return(
     <Fragment>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar sx={{ backgroundColor: `#184890`, }} position="static">
-          <Toolbar sx={{ display: `flex`, pt: 1, pb: 1, pl: `0 !important` }}>
+        <AppBar sx={{ backgroundColor: `#113264`, }} position="static">
+          <Toolbar sx={{ display: `flex`, pt: 1, pb: 1, pl: `8px !important` }}>
             {props.children}
           </Toolbar>
         </AppBar>

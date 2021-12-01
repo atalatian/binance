@@ -4,7 +4,7 @@ import Tablet from "./Tablet/Tablet";
 import {useTheme} from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-const OrderForm = () => {
+const OrderForm = (props) => {
 
   const theme = useTheme();
   const tablet = useMediaQuery(theme.breakpoints.up('md'));
@@ -13,7 +13,7 @@ const OrderForm = () => {
 
   const handleRender = () => {
     if (string === 'true false'){
-      return <Tablet/>
+      return <Tablet string={props.string}/>
     }else if (string === 'true true'){
       return <PC/>
     }

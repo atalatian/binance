@@ -8,20 +8,20 @@ const tabNames = [
   {
     id: `t1`,
     icons: [
-      {id: `i1`, color: `rgb(246, 70, 93)`},
-      {id: `i2`, color: `rgb(14, 203, 129)`},
+      {id: `i1`, color: `#d23423`},
+      {id: `i2`, color: `#c0d223`},
     ]
   },
   {
     id: `t2`,
     icons: [
-      {id: `i1`, color: `rgb(14, 203, 129)`},
+      {id: `i1`, color: `#c0d223`},
     ]
   },
   {
     id: `t3`,
     icons: [
-      {id: `i1`, color: `rgb(246, 70, 93)`},
+      {id: `i1`, color: `#d23423`},
     ]
   },
 ]
@@ -39,20 +39,20 @@ const  MuiTabs = () => {
         value={value}
         onChange={handleChange}
         sx={{
-          backgroundColor: `#184890`,
+          backgroundColor: `#113264`,
           '& .MuiButtonBase-root': {
             color: `#ffffff`,
             display: `flex`,
             flexDirection: `row-reverse`,
           },
           '& .MuiTabs-indicator': {
-            backgroundColor: '#FFB81C'
+            backgroundColor: '#d28c23'
           },
           '& .MuiButtonBase-root.Mui-selected': {
-            color: '#FFB81C',
+            color: '#d28c23',
           },
           '& .MuiButtonBase-root:hover': {
-            color: '#FFB81C',
+            color: '#d28c23',
           },
         }}
         variant="scrollable"

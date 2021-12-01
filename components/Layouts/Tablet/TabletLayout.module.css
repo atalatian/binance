@@ -39,4 +39,5 @@
     position: sticky;
     bottom: 0;
     z-index: 100;
+    border: 1px solid #184890;
 }

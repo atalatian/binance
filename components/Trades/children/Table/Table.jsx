@@ -12,23 +12,23 @@ function createData(id, pair, price, change, color) {
 }
 
 const rows = [
-  createData('d1', 'BTC/USDT', `0.4956`, `+0.26%`, `rgb(14, 203, 129)`),
-  createData('d2', 'BTC/USDT', `0.4956`, `-0.26%`, `rgb(246, 70, 93)`),
-  createData('d3', 'BTC/USDT', `0.4956`, `-0.26%`, `rgb(246, 70, 93)`),
-  createData('d4', 'BTC/USDT', `0.4956`, `+0.26%`, `rgb(14, 203, 129)`),
-  createData('d5', 'BTC/USDT', `0.4956`, `+0.26%`, `rgb(14, 203, 129)`),
-  createData('d6', 'BTC/USDT', `0.4956`, `-0.26%`, `rgb(246, 70, 93)`),
-  createData('d7', 'BTC/USDT', `0.4956`, `+0.26%`, `rgb(14, 203, 129)`),
-  createData('d8', 'BTC/USDT', `0.4956`, `+0.26%`, `rgb(14, 203, 129)`),
-  createData('d9', 'BTC/USDT', `0.4956`, `-0.26%`, `rgb(246, 70, 93)`),
-  createData('d10', 'BTC/USDT', `0.4956`, `-0.26%`, `rgb(246, 70, 93)`),
-  createData('d11', 'BTC/USDT', `0.4956`, `+0.26%`, `rgb(14, 203, 129)`),
+  createData('d1', 'BTC/USDT', `0.4956`, `+0.26%`, `#c0d223`),
+  createData('d2', 'BTC/USDT', `0.4956`, `-0.26%`, `#d23423`),
+  createData('d3', 'BTC/USDT', `0.4956`, `-0.26%`, `#d23423`),
+  createData('d4', 'BTC/USDT', `0.4956`, `+0.26%`, `#c0d223`),
+  createData('d5', 'BTC/USDT', `0.4956`, `+0.26%`, `#c0d223`),
+  createData('d6', 'BTC/USDT', `0.4956`, `-0.26%`, `#d23423`),
+  createData('d7', 'BTC/USDT', `0.4956`, `+0.26%`, `#c0d223`),
+  createData('d8', 'BTC/USDT', `0.4956`, `+0.26%`, `#c0d223`),
+  createData('d9', 'BTC/USDT', `0.4956`, `-0.26%`, `#d23423`),
+  createData('d10', 'BTC/USDT', `0.4956`, `-0.26%`, `#d23423`),
+  createData('d11', 'BTC/USDT', `0.4956`, `+0.26%`, `#c0d223`),
 ];
 
 const DenseTable = (props) => {
   return (
     <TableContainer
-      sx={{ backgroundColor: `#184890`, borderRadius: 0,
+      sx={{ backgroundColor: `#113264`, borderRadius: 0,
         maxHeight: `${(props.maxHeight ? `${props.maxHeight}rem` : 'none')}`, }} component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableHead>

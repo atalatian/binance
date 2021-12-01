@@ -22,11 +22,10 @@ import {
   MouseCoordinateY,
   ZoomButtons,
 } from "react-financial-charts";
-import { useSelector } from 'react-redux'
 
 const CandleStick = (props) => {
 
-  const initialData = props.data
+  const initialData = props.candles
 
   const ScaleProvider = discontinuousTimeScaleProviderBuilder().inputDateAccessor(
     (d) => new Date(d.date)
@@ -56,11 +55,11 @@ const CandleStick = (props) => {
   const { data, xScale, xAccessor, displayXAccessor } = ScaleProvider(
     initialData
   );
-  const reduxPair = useSelector(state => state);
+
   let pricesDisplayFormat;
-  if (reduxPair === 'BTC/USDT'){
+  if (props.pair === 'BTC/USDT'){
     pricesDisplayFormat = format(".0f")
-  }else if (reduxPair === 'BNB/BTC'){
+  }else if (props.pair === 'BNB/BTC'){
     pricesDisplayFormat = format(".4f");
   }
   const max = xAccessor(data[data.length - 1]);
@@ -90,8 +89,8 @@ const CandleStick = (props) => {
 
   const volumeColor = (data) => {
     return data.close > data.open
-      ? "rgba(38, 166, 154, 0.3)"
-      : "rgba(239, 83, 80, 0.3)";
+      ? "rgba(132,144,24, 0.3)"
+      : "rgb(144,36,24, 0.3)";
   };
 
   const volumeSeries = (data) => {
@@ -99,8 +98,12 @@ const CandleStick = (props) => {
   };
 
   const openCloseColor = (data) => {
-    return data.close > data.open ? "#0ecbb0" : "#f6465d";
+    return data.close > data.open ? "#849018" : "#902418";
   };
+
+  const colorPick = (data) => {
+    return data.close > data.open ? "#849018" : "#902418";
+  }
 
   return (
     <ChartCanvas
@@ -127,7 +130,7 @@ const CandleStick = (props) => {
       <Chart id={3} height={chartHeight} yExtents={candleChartExtents}>
         <XAxis showGridLines tickLabelFill={`#ffffff`}/>
         <YAxis showGridLines tickFormat={pricesDisplayFormat} tickLabelFill={`#ffffff`}/>
-        <CandlestickSeries />
+        <CandlestickSeries fill={colorPick} wickStroke={colorPick}/>
         <LineSeries yAccessor={ema26.accessor()} strokeStyle={ema26.stroke()} />
         <CurrentCoordinate
           yAccessor={ema26.accessor()}
@@ -154,7 +157,7 @@ const CandleStick = (props) => {
           displayFormat={pricesDisplayFormat}
           yAccessor={yEdgeIndicator}
         />
-        <MovingAverageTooltip textFill={'#FFB81C'} labelFill={'#ffffff'}
+        <MovingAverageTooltip textFill={'#d28c23'} labelFill={'#ffffff'}
           origin={[8, 24]}
           options={[
             {
@@ -172,7 +175,7 @@ const CandleStick = (props) => {
           ]}
         />
         <ZoomButtons />
-        <OHLCTooltip textFill={'#FFB81C'} labelFill={'#ffffff'} origin={[8, 16]} />
+        <OHLCTooltip  textFill={'#d28c23'} labelFill={'#ffffff'} origin={[8, 16]} />
       </Chart>
       <CrossHairCursor />
     </ChartCanvas>

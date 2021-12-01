@@ -17,7 +17,7 @@ const Toggles = () => {
 
   return(
     <Fragment>
-      <Stack sx={{ p: 1, backgroundColor: `#2b4c7d` }} flexWrap={`wrap`}
+      <Stack sx={{ p: 1, backgroundColor: `#0d274e` }} flexWrap={`wrap`}
              direction={`row`} spacing={2} alignItems={`center`}>
         <ToggleButtonGroup
           color="primary"
@@ -28,17 +28,17 @@ const Toggles = () => {
           {
             toggleButtons.map((toggleButton, index) =>
               <ToggleButton key={index} sx={{ color: `#ffffff`,
-                '&.Mui-selected:hover': {backgroundColor: `#ffefcd`, color: `#FFB81C`},
-                '&:hover': {backgroundColor: `#ffefcd`, color: `#FFB81C`},
-                '&.Mui-selected': {color: `#FFB81C`, backgroundColor: `#ffefcd`} }}
+                '&.Mui-selected:hover': {backgroundColor: `#644311`, color: `#d28c23`},
+                '&:hover': {backgroundColor: `#644311`, color: `#d28c23`},
+                '&.Mui-selected': {color: `#644311`, backgroundColor: `#d28c23`} }}
                             value={`${toggleButton}`}>{toggleButton}</ToggleButton>
             )
           }
         </ToggleButtonGroup>
-        <IconButton sx={{ color: `#ffffff`, '&:hover': {color: `#FFB81C`} }}>
+        <IconButton sx={{ color: `#ffffff`, '&:hover': {color: `#644311`} }}>
           <ArrowDropDown/>
         </IconButton>
-        <IconButton sx={{ color: `#ffffff`, '&:hover': {color: `#FFB81C`} }}>
+        <IconButton sx={{ color: `#ffffff`, '&:hover': {color: `#644311`} }}>
           <ErrorOutlineOutlined/>
         </IconButton>
       </Stack>

@@ -14,17 +14,17 @@ const steps = [
 
 const MuiStepper = () => {
   return (
-    <Box sx={{ width: '100%', backgroundColor: `#2b4c7d`, p: 1 }}>
+    <Box sx={{ width: '100%', backgroundColor: `#0d274e`, p: 1 }}>
       <Stepper alternativeLabel>
         {steps.map((step) => (
           <Step key={step.id} sx={{
             '& .MuiSvgIcon-root': {color: `rgb(255 255 255 / 38%)`},
-            '& .MuiSvgIcon-root.Mui-active': {color: `#FFB81C`}
+            '& .MuiSvgIcon-root.Mui-active': {color: `#d28c23`}
           }}>
             <StepLabel
               sx={{
                 '& .MuiStepLabel-labelContainer': { color: `rgb(255 255 255 / 60%)` },
-                '& .MuiStepLabel-label.Mui-active': { color: `#FFB81C` }
+                '& .MuiStepLabel-label.Mui-active': { color: `#d28c23` }
               }}>{step.text}</StepLabel>
           </Step>
         ))}
