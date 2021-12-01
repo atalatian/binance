@@ -131,12 +131,12 @@ const CandleStick = (props) => {
         <XAxis showGridLines tickLabelFill={`#ffffff`}/>
         <YAxis showGridLines tickFormat={pricesDisplayFormat} tickLabelFill={`#ffffff`}/>
         <CandlestickSeries fill={colorPick} wickStroke={colorPick}/>
-        <LineSeries yAccessor={ema26.accessor()} strokeStyle={ema26.stroke()} />
+        <LineSeries yAccessor={ema26.accessor()} strokeStyle={`#902418`} />
         <CurrentCoordinate
           yAccessor={ema26.accessor()}
           fillStyle={ema26.stroke()}
         />
-        <LineSeries yAccessor={ema12.accessor()} strokeStyle={ema12.stroke()} />
+        <LineSeries yAccessor={ema12.accessor()} strokeStyle={`#849018`}  />
         <CurrentCoordinate
           yAccessor={ema12.accessor()}
           fillStyle={ema12.stroke()}
@@ -163,13 +163,13 @@ const CandleStick = (props) => {
             {
               yAccessor: ema26.accessor(),
               type: "EMA",
-              stroke: ema26.stroke(),
+              stroke: `#902418`,
               windowSize: ema26.options().windowSize
             },
             {
               yAccessor: ema12.accessor(),
               type: "EMA",
-              stroke: ema12.stroke(),
+              stroke: `#849018`,
               windowSize: ema12.options().windowSize
             }
           ]}
