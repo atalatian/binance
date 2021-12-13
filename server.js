@@ -67,6 +67,5 @@ app.prepare().then(async () => {
 
   }).listen(PORT, (err) => {
     if (err) throw err
-    console.log('> Ready on http://localhost:3000')
   })
 })
