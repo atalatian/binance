@@ -4,6 +4,7 @@ const next = require('next')
 const mongoose = require('mongoose');
 const ccxt = require('ccxt')
 const Candle = require('./server/src/candlestickModel')
+const PORT = process.env.PORT || 3000;
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -64,7 +65,7 @@ app.prepare().then(async () => {
     const parsedUrl = parse(req.url, true)
     handle(req, res, parsedUrl)
 
-  }).listen(3000, (err) => {
+  }).listen(PORT, (err) => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
   })
