@@ -57,7 +57,7 @@ app.prepare().then(async () => {
     'mongodb+srv://atalatian:Amirhoseyn2014@cluster0.auyyz.mongodb.net/Binance?retryWrites=true&w=majority'
   ).catch((err)=> console.log(err))
 
-  await createCandles();
+  //await createCandles();
 
   await createServer((req, res) => {
 
