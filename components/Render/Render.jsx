@@ -19,6 +19,8 @@ const Render = () => {
       return <TabletLayout string={string} />
     }else if (string === 'true true true'){
       return <PCLayout />
+    }else if (string === 'false false false'){
+      return <PhoneLayout />
     }
   }
 

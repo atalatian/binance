@@ -5,6 +5,8 @@ import { faAdjust, faBars, faQuestionCircle } from '@fortawesome/free-solid-svg-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import NavBarItem from '../UI/NavBarItem/NavBarItem'
 import Image from 'next/image';
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 const itemSet1 = [
   {id: 'it1', children: <FontAwesomeIcon icon={faBars} size={`lg`}/>,
@@ -45,15 +47,46 @@ const itemSet5 = [
     justIcon: true,},
 ]
 
-const items = [
-  {id: `is1`, item: itemSet1,},
-  {id: `is2`, item: itemSet2,},
-  {id: `is3`, item: itemSet3,},
-  {id: `is4`, item: itemSet4,},
-  {id: `is5`, item: itemSet5,},
-]
-
 const NavBarComponent = () => {
+  const theme = useTheme();
+  const phone = useMediaQuery(theme.breakpoints.up('sm'))
+  const tablet = useMediaQuery(theme.breakpoints.up('md'));
+  const pc = useMediaQuery(theme.breakpoints.up('lg'));
+  const string = `${phone} ${tablet} ${pc}`;
+  let items = [
+    {id: `is1`, item: itemSet1,},
+    {id: `is2`, item: itemSet2,},
+    {id: `is3`, item: itemSet3,},
+    {id: `is4`, item: itemSet4,},
+    {id: `is5`, item: itemSet5,},
+  ]
+
+  if (string === 'true false false'){
+    items = [
+      {id: `is1`, item: itemSet1,},
+      {id: `is2`, item: itemSet2,},
+    ]
+  }else if (string === 'true true false'){
+    items = [
+      {id: `is1`, item: itemSet1,},
+      {id: `is2`, item: itemSet2,},
+      {id: `is3`, item: itemSet3,},
+    ]
+  }else if (string === 'true true true'){
+    items = [
+      {id: `is1`, item: itemSet1,},
+      {id: `is2`, item: itemSet2,},
+      {id: `is3`, item: itemSet3,},
+      {id: `is4`, item: itemSet4,},
+      {id: `is5`, item: itemSet5,},
+    ]
+  }else if (string === 'false false false'){
+    items = [
+      {id: `is2`, item: itemSet2,},
+    ]
+  }
+
+
   return(
     <NavBar>
       <Box sx={{ width: `10rem`, display: `flex`, alignItems: `center` }}>
