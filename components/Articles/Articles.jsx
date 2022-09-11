@@ -36,7 +36,7 @@ const Articles = () => {
 
   return(
     <Fragment>
-      <Paper sx={{ backgroundColor: `#0d274e`, borderRadius: 0, pt: 1, pb: 1 }}>
+      <Paper sx={{ backgroundColor: `#0d274e`, borderRadius: 0, pt: 1, pb: 1, mb: `2px` }}>
         <Grid container alignItems={`center`}>
           <Grid item xs={11}>
             <Grid container>

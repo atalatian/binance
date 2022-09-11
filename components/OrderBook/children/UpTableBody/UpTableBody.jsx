@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import { Fragment } from 'react'
 import { Link, Stack, Typography } from '@mui/material'
+import TableHead from '@mui/material/TableHead'
 
 function createData(id, price, amount, time, color) {
   return { id, price, amount, time, color};
@@ -32,31 +33,30 @@ const rows = [
 const UpTableBody = (props) => {
   return(
     <Fragment>
-      <Stack sx={{ p: 1, backgroundColor: `#113264` }} direction={`row`} spacing={2} alignItems={`center`}>
-        <Typography variant={`body1`} sx={{ color: `#ffffff` }}>
-          58,254.74
-        </Typography>
-        <Typography variant={`caption`} sx={{ color: `#ffffff` }}>
-          $58,254.74
-        </Typography>
-        <Link href={`#`} underline={`none`}
-              sx={{
-                color: `#ffffff`,
-                margin: `auto !important`,
-                marginRight: `0 !important`,
-                '&:hover': {
-                  color: `#d28c23`
-                }
-              }}>
-          <Typography variant={`caption`}>
-            More
-          </Typography>
-        </Link>
-      </Stack>
       <TableContainer
-        sx={{ backgroundColor: `#113264`, borderRadius: 0,
-          maxHeight: `${(props.maxHeight ? `${props.maxHeight}rem` : 'none')}`, }} component={Paper}>
+          className={`orderBook_upTableBody`}
+        sx={{ backgroundColor: `#113264`, borderRadius: 0, overflow: `auto`,
+          maxHeight: `${(props.maxHeight ? `${props.maxHeight}px` : 'none')}`, }} component={Paper}>
         <Table size="small" aria-label="a dense table">
+            <TableHead sx={{ borderTop: 2, borderBottom: 1, borderColor: `#184890` }}>
+                <TableRow sx={{ '& td, & th': { border: 0 } }}>
+                    <TableCell sx={{ color: `#ffffff` }} align="left">
+                        <Typography variant={`body1`} sx={{ color: `#ffffff` }}>
+                            58,254.74
+                        </Typography>
+                    </TableCell>
+                    <TableCell sx={{ color: `#ffffff` }} align="left">
+                        <Typography variant={`caption`} sx={{ color: `#ffffff` }}>
+                            $58,254.74
+                        </Typography>
+                    </TableCell>
+                    <TableCell sx={{ color: `#ffffff`, pr:1 }} align="right">
+                        <Typography variant={`caption`}>
+                            More
+                        </Typography>
+                    </TableCell>
+                </TableRow>
+            </TableHead>
           <TableBody>
             {rows.map((row) => (
               <TableRow

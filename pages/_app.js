@@ -1,5 +1,6 @@
 import client from '../graphql/client/apollo-client'
 import { ApolloProvider } from '@apollo/client'
+import '../styles/scrollbar.css';
 
 
 function MyApp ({ Component, pageProps }) {

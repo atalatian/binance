@@ -30,8 +30,9 @@ const PCLayout = () => {
                   </Grid>
                   <Grid item xs={12}>
                     <Grid container flexWrap={`nowrap`} direction={`row`}>
-                      <Grid item xs={4} sx={{ border: `1px solid #184890` }}>
-                        <OrderBook maxHeight={23.8}/>
+                      <Grid item xs={4} sx={{ border: `1px solid #184890`,
+                        flexDirection: `column` }}>
+                        <OrderBook maxHeight={420}/>
                       </Grid>
                       <Grid item xs={8}>
                         <Grid container direction={`column`}>
@@ -50,10 +51,10 @@ const PCLayout = () => {
               <Grid item xs={3}>
                 <Grid container>
                   <Grid item xs={12} sx={{ border: `1px solid #184890` }}>
-                    <Trades maxHeight={18.65}/>
+                    <Trades maxHeight={320}/>
                   </Grid>
                   <Grid item xs={12} sx={{ border: `1px solid #184890` }}>
-                    <Market maxHeight={18.65}/>
+                    <Market maxHeight={320}/>
                   </Grid>
                   <Grid item xs={12} sx={{ border: `1px solid #184890` }}>
                     <MarketActivities/>

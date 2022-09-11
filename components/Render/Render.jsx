@@ -7,9 +7,9 @@ import PCLayout from "../Layouts/PC/PCLayout";
 
 const Render = () => {
   const theme = useTheme();
-  const phone = useMediaQuery(theme.breakpoints.up('sm'))
-  const tablet = useMediaQuery(theme.breakpoints.up('md'));
-  const pc = useMediaQuery(theme.breakpoints.up('lg'));
+  const phone = useMediaQuery('(min-width:0px)')
+  const tablet = useMediaQuery(`(min-width:950px)`);
+  const pc = useMediaQuery(`(min-width:1200px)`);
   const string = `${phone} ${tablet} ${pc}`;
 
   const handleRender = () => {
@@ -19,8 +19,6 @@ const Render = () => {
       return <TabletLayout string={string} />
     }else if (string === 'true true true'){
       return <PCLayout />
-    }else if (string === 'false false false'){
-      return <PhoneLayout />
     }
   }
 

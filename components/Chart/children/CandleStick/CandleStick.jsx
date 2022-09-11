@@ -128,8 +128,8 @@ const CandleStick = (props) => {
         <BarSeries fillStyle={volumeColor} yAccessor={volumeSeries} />
       </Chart>
       <Chart id={3} height={chartHeight} yExtents={candleChartExtents}>
-        <XAxis showGridLines tickLabelFill={`#ffffff`}/>
-        <YAxis showGridLines tickFormat={pricesDisplayFormat} tickLabelFill={`#ffffff`}/>
+        <XAxis showGridLines gridLinesStrokeStyle={`#000000`} tickLabelFill={`#ffffff`}/>
+        <YAxis showGridLines gridLinesStrokeStyle={`#000000`} tickFormat={pricesDisplayFormat} tickLabelFill={`#ffffff`}/>
         <CandlestickSeries fill={colorPick} wickStroke={colorPick}/>
         <LineSeries yAccessor={ema26.accessor()} strokeStyle={`#902418`} />
         <CurrentCoordinate
@@ -175,7 +175,7 @@ const CandleStick = (props) => {
           ]}
         />
         <ZoomButtons />
-        <OHLCTooltip  textFill={'#d28c23'} labelFill={'#ffffff'} origin={[8, 16]} />
+        <OHLCTooltip  textFill={'#d28c23'} labelFill={'#ffffff'} fontSize={12} origin={[8, 16]} />
       </Chart>
       <CrossHairCursor />
     </ChartCanvas>

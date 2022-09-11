@@ -95,7 +95,7 @@ const NavBarComponent = () => {
       {
         items.map(is => {
           return(
-            <Box key={is.id} className={`${ is.id === 'is2' && 'm-auto me-0' }`}>
+            <Box key={is.id} sx={is.id === 'is2' ? { ml: `auto` } : null}>
               {
                 is.item.map(item =>
                   <Box key={item.id} sx={{ display: `inline-block` }}>

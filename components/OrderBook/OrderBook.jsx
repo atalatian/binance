@@ -8,7 +8,6 @@ const OrderBook = (props) => {
   return(
     <Fragment>
       <MuiTabs/>
-      <MyTableHead/>
       <DownTableBody maxHeight={props.maxHeight}/>
       <UpTableBody maxHeight={props.maxHeight}/>
     </Fragment>

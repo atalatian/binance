@@ -28,10 +28,10 @@ const TabletLayout = (props) => {
                 <Grid item xs={12}>
                   <Grid container>
                     <Grid item xs={6} sx={{ border: `1px solid #184890` }}>
-                      <Market maxHeight={23}/>
+                      <Market maxHeight={360}/>
                     </Grid>
                     <Grid item xs={6} sx={{ border: `1px solid #184890` }}>
-                      <OrderBook maxHeight={8}/>
+                      <OrderBook maxHeight={163}/>
                     </Grid>
                   </Grid>
                 </Grid>

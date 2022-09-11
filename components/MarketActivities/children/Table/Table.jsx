@@ -8,6 +8,7 @@ import Paper from '@mui/material/Paper';
 import TableHead from '@mui/material/TableHead'
 import { Button, Typography } from '@mui/material'
 import { ArrowDownward, ArrowUpward } from '@mui/icons-material'
+import Box from '@mui/material/Box'
 
 
 const rows = [
@@ -41,11 +42,14 @@ const rows = [
 
 const BasicTable = () => {
   return (
-    <TableContainer sx={{ backgroundColor: `#113264`, borderRadius: 0, }} component={Paper}>
+    <TableContainer
+        className={`marketActivities_table`}
+        sx={{ backgroundColor: `#113264`, borderRadius: 0,
+      height: 203, maxHeight: 202, }} component={Paper}>
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell sx={{ color: `#ffffff` }} align="left">Market Activities</TableCell>
+            <TableCell sx={{ color: `#ffffff` }} align="left"><Typography>Market Activities</Typography></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

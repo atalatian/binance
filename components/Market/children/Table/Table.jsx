@@ -27,8 +27,10 @@ const rows = [
 
 const DenseTable = (props) => {
   return (
-    <TableContainer sx={{ backgroundColor: `#113264`, borderRadius: 0,
-      maxHeight: `${(props.maxHeight ? `${props.maxHeight}rem` : 'none')}`, }}
+    <TableContainer
+    className={`market_table`}
+        sx={{ backgroundColor: `#113264`, borderRadius: 0,
+      maxHeight: `${(props.maxHeight ? `${props.maxHeight}px` : 'none')}`, }}
                     component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableHead>

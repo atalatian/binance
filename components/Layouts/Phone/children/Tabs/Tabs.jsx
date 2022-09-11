@@ -81,10 +81,10 @@ const  MuiTabs = () => {
         <Parent/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <OrderBook/>
+        <OrderBook maxHeight={184.5}/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Trades/>
+        <Trades maxHeight={373}/>
       </TabPanel>
     </Box>
   );
