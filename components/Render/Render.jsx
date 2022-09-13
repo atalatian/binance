@@ -12,10 +12,6 @@ const Render = () => {
   const pc = useMediaQuery(`(min-width:1200px)`);
   const string = `${phone} ${tablet} ${pc}`;
 
-  useEffect(()=>{
-    alert('برای اتصال به Binance وی پی ان خود را روشن کنید')
-  }, [])
-
   const handleRender = () => {
     if (string === 'true false false'){
       return <PhoneLayout />
