@@ -1,4 +1,4 @@
-import {Fragment} from 'react'
+import { Fragment, useEffect } from 'react'
 import PhoneLayout from "../Layouts/Phone/PhoneLayout";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -11,6 +11,10 @@ const Render = () => {
   const tablet = useMediaQuery(`(min-width:950px)`);
   const pc = useMediaQuery(`(min-width:1200px)`);
   const string = `${phone} ${tablet} ${pc}`;
+
+  useEffect(()=>{
+    alert('برای اتصال به Binance وی پی ان خود را روشن کنید')
+  }, [])
 
   const handleRender = () => {
     if (string === 'true false false'){
