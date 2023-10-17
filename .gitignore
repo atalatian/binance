@@ -111,3 +111,5 @@ dist
 .Trashes
 ehthumbs.db
 Thumbs.db
+.swc
+.idea
