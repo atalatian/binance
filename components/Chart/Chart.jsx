@@ -50,7 +50,7 @@ const Chart = (props) => {
              elevation={0} ref={e => handleRef(e)}>
           {
               renderChart &&
-                <CandleStick candles={formatCandles(props.candles)} pair={props.pair} width={chartWidth}/>
+                <CandleStick candles={props.candles} pair={props.pair} width={chartWidth}/>
 
           }
       </Paper>

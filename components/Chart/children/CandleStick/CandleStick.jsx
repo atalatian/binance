@@ -141,14 +141,6 @@ const CandleStick = (props) => {
           yAccessor={ema12.accessor()}
           fillStyle={ema12.stroke()}
         />
-        <MouseCoordinateY
-          rectWidth={margin.right}
-          displayFormat={pricesDisplayFormat}
-        />
-        <MouseCoordinateX
-          rectWidth={margin.bottom}
-          displayFormat={timeDisplayFormat}
-        />
         <EdgeIndicator
           itemType="last"
           rectWidth={margin.right}

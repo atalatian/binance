@@ -5,7 +5,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "next build",
     "start": "nodemon server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev": "next dev"
   },
   "dependencies": {
     "@apollo/client": "^3.5.5",
